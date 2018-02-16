@@ -1,0 +1,36 @@
+name:                   editor
+version:                0.1.0.0
+license:                BSD3
+license-file:           LICENSE
+author:                 Rachel K
+maintainer:             raech.kanati@gmail.com
+category:               Text
+build-type:             Simple
+extra-source-files:     ChangeLog.md
+cabal-version:          >=1.10
+
+executable editor
+  default-language:     Haskell2010
+  default-extensions:   BangPatterns BinaryLiterals ConstraintKinds DataKinds
+                        DefaultSignatures DeriveFoldable DeriveFunctor
+                        DeriveGeneric DeriveLift DeriveTraversable
+                        DerivingStrategies EmptyCase FlexibleContexts
+                        FlexibleInstances FunctionalDependencies GADTs
+                        GeneralizedNewtypeDeriving InstanceSigs LambdaCase
+                        MultiWayIf NoMonomorphismRestriction NamedFieldPuns
+                        OverloadedStrings PatternSynonyms
+                        RankNTypes ScopedTypeVariables StandaloneDeriving
+                        TupleSections TypeApplications TypeFamilyDependencies
+                        TypeOperators
+
+  build-depends:          base       >= 4.10 && < 4.11
+                        , ioctl      == 0.0.1
+                        , unix       == 2.7.*
+                        , mtl        == 2.2.*
+                        , text       == 1.2.*
+                        , containers == 0.5.*
+
+  hs-source-dirs:       src
+  main-is:              Main.hs
+  other-modules:        Editor.Buffer
+
